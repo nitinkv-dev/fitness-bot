@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness & Fitness AI Coach</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-content">
+                <div class="avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="header-text">
+                    <h1>Happiness & Fitness AI Coach</h1>
+                    <span class="status"><span class="status-dot"></span> Online</span>
+                </div>
+            </div>
+            <button class="settings-btn"><i class="fas fa-cog"></i></button>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>Hello! I'm your Happiness & Fitness AI Coach 🌟</p>
+                    <p>I'm here to help you with:</p>
+                    <ul>
+                        <li>💪 Workout routines and exercises</li>
+                        <li>🥗 Nutrition and diet advice</li>
+                        <li>🧘 Mental wellness & mindfulness</li>
+                        <li>📊 Fitness goal tracking</li>
+                    </ul>
+                    <p>How can I help you today?</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-area">
+            <button class="emoji-btn" id="bmiBtn" title="BMI Calculator"><i class="fas fa-calculator"></i></button>
+            <input type="text" id="userInput" placeholder="Type your message..." autocomplete="off">
+            <button class="send-btn" id="sendBtn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- BMI Calculator Modal -->
+    <div class="modal-overlay" id="bmiModal">
+        <div class="bmi-modal">
+            <div class="bmi-header">
+                <h2>📊 BMI Calculator</h2>
+                <button class="close-modal" id="closeBmi"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="bmi-form">
+                <div class="input-group">
+                    <label>Height (cm)</label>
+                    <input type="number" id="heightCm" placeholder="e.g., 175">
+                </div>
+                <div class="input-group">
+                    <label>Weight (kg)</label>
+                    <input type="number" id="weightKg" placeholder="e.g., 70">
+                </div>
+                <button class="calculate-btn" id="calculateBmi">Calculate BMI</button>
+            </div>
+            <div class="bmi-result" id="bmiResult" style="display: none;">
+                <div class="bmi-value" id="bmiValue"></div>
+                <div class="bmi-category" id="bmiCategory"></div>
+                <div class="bmi-scale">
+                    <div class="scale-bar">
+                        <div class="scale-marker" id="scaleMarker"></div>
+                    </div>
+                    <div class="scale-labels">
+                        <span>Underweight</span>
+                        <span>Normal</span>
+                        <span>Overweight</span>
+                        <span>Obese</span>
+                    </div>
+                </div>
+                <div class="bmi-recommendation" id="bmiRecommendation"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
